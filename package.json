@@ -5,9 +5,13 @@
   "repository": "https://github.com/Manrick-Lazaro/TaskList.git",
   "author": "manrick Lázaro <manricksantos@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch \"src\" --exec \"ts-node src/index.ts\" -e ts"
+  },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }
