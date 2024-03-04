@@ -1,3 +1,0 @@
-{
-  "*.ts": ["yarn eslint 'src/**' --fix", "yarn prettier --check 'src/**' "]
-}
