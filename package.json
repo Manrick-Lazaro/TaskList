@@ -1,0 +1,8 @@
+{
+  "name": "TaskList",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Manrick-Lazaro/TaskList.git",
+  "author": "manrick Lázaro <manricksantos@gmail.com>",
+  "license": "MIT"
+}
