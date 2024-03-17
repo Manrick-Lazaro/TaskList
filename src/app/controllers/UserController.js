@@ -1,18 +1,18 @@
-import User from "../models/user";
+import User from "../models/User";
 
 class UserController {
     async store(req, res) {
-        const userFindOne = await User.findOne({
-            email: req.body.email,
+        const userExists = await User.findOne({
+            where: { email: req.body.email },
         });
 
-        if (userFindOne) {
+        if (userExists) {
             return res
                 .status(400)
-                .json({ erro: "usuario com este e-mail já existe." });
+                .json({ erro: "usuario com e-mail já cadastrado." });
         }
 
-        const { id, name, email } = User.create(req.body);
+        const { id, name, email } = await User.create(req.body);
 
         return res.status(200).json({ id, name, email });
     }
