@@ -6,7 +6,7 @@ module.exports = {
     port: process.env.DB_PORT,
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
-    database: process.env.Tasklist,
+    database: process.env.DATABASE,
     define: {
         timestamps: true,
         underscored: true, // nome tabele user_id
