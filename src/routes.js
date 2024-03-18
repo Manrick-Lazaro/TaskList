@@ -8,6 +8,7 @@ import SessionController from "./app/controllers/SessionController";
 const routes = new Router();
 
 routes.post("/users", UserController.store);
+routes.get("/users", UserController.show);
 routes.put("/users", authMiddlewares, UserController.update);
 
 routes.post("/sessions", SessionController.store);

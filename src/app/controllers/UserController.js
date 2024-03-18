@@ -42,6 +42,14 @@ class UserController {
 
         return res.json({ id, name, email });
     }
+
+    async show(req, res) {
+        const { email } = req.body;
+
+        const user = await User.findOne({ email: email });
+
+        return res.json(user);
+    }
 }
 
 export default new UserController();
