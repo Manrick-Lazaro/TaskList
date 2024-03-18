@@ -50,6 +50,24 @@ class UserController {
 
         return res.json(user);
     }
+
+    async destroy(req, res) {
+        const user = await User.findByPk(req.user_id);
+
+        try {
+            if (!user) {
+                return res
+                    .status(404)
+                    .json({ error: "Usuário não encontrado." });
+            }
+
+            await user.destroy();
+
+            return res.status(204).send();
+        } catch (err) {
+            return res.status(500).json({ error: "Erro ao excluir usuário." });
+        }
+    }
 }
 
 export default new UserController();
