@@ -42,6 +42,22 @@ class UserController {
 
         return res.json({ id, name, email });
     }
+
+    async show(req, res) {
+        const { email } = req.body;
+
+        const user = await User.findOne({ email: email });
+
+        return res.json(user);
+    }
+
+    async destroy(req, res) {
+        const user = await User.findByPk(req.user_id);
+
+        await user.destroy();
+
+        return res.status(204).send();
+    }
 }
 
 export default new UserController();
