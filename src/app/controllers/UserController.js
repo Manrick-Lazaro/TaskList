@@ -57,7 +57,6 @@ class UserController {
         await user.destroy();
 
         return res.status(204).send();
-        }
     }
 }
 
