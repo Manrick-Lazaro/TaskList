@@ -21,6 +21,20 @@ class TaskController {
         return res.json(task_created);
     }
 
+    async update(req, res) {
+        const { task_id } = req.params;
+
+        const task = await Task.findByPk(task_id);
+
+        if (!task) {
+            return res.status(400).json({ error: "Tarefa não existe." });
+        }
+
+        await task.update(req.body);
+
+        return res.json(task);
+    }
+
     async index(req, res) {
         const tasks = await Task.findAll({
             where: { user_id: req.user_id, check: false },
