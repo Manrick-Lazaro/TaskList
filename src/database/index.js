@@ -2,7 +2,7 @@ import Sequelize from "sequelize";
 import database from "../config/database";
 
 import User from "../app/models/User";
-import Task from "../app/models/task";
+import Task from "../app/models/Task";
 
 const models = [User, Task];
 
@@ -14,11 +14,12 @@ class Database {
     init() {
         this.connection = new Sequelize(database);
 
-        models.map((models) => models.init(this.connection));
-        models.map(
-            (models) =>
-                models.associate && models.associate(this.connection.models)
-        );
+        models
+            .map((models) => models.init(this.connection))
+            .map(
+                (models) =>
+                    models.associate && models.associate(this.connection.models)
+            );
     }
 }
 
