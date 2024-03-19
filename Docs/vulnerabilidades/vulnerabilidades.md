@@ -1,4 +1,3 @@
-
 # Lista de vulnerabilidades
 
 ## vulnerabilidade 01
@@ -8,13 +7,11 @@
 <br/>
 
 ![src/app/controllers/UserController.js](./imgs/show_user.png)
-*src/app/controllers/UserController.js*
+_src/app/controllers/UserController.js_
 
 <br/>
     
-<p>A6:2017 - Segurança e Gerenciamento de Configuração.</p>
+<p>A05:2021 - 2021-Security Misconfiguration.</p>
     
 <p>A razão é que o código está expondo informações sensíveis do usuário sem qualquer controle de acesso ou verificação de autenticação. Qualquer pessoa que possa fazer uma solicitação ao endpoint associado a essa função poderia potencialmente obter informações sobre um usuário apenas fornecendo um endereço de e-mail.</p>
 </section>
-
-
