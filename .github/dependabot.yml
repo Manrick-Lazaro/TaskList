@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "yarn"
+    directory: "/" 
+    target-branch: "main"
+    schedule:
+      interval: "weekly"
+
+   - package-ecosystem: "Github-Actions"
+    directory: "/" 
+    schedule:
+      interval: "weekly"
