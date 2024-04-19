@@ -9,7 +9,7 @@ class Task extends Model {
             },
             {
                 sequelize,
-            }
+            },
         );
 
         return this;
