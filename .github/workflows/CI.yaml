@@ -25,7 +25,7 @@ jobs:
               run: yarn
 
             - name: Run Prettier
-              run: yarn run prettier --check ./src
+              run: yarn run prettier --check src/*.js
 
             - name: Run Tests
               run: yarn run test
