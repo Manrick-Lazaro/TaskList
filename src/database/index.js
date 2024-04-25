@@ -16,10 +16,7 @@ class Database {
 
         models
             .map((models) => models.init(this.connection))
-            .map(
-                (models) =>
-                    models.associate?.(this.connection.models)
-            );
+            .map((models) => models.associate?.(this.connection.models));
     }
 }
 
