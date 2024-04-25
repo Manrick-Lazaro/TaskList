@@ -7,17 +7,17 @@ import Task from "../app/models/Task";
 const models = [User, Task];
 
 class Database {
-    constructor() {
-        this.init();
-    }
+	constructor() {
+		this.init();
+	}
 
-    init() {
-        this.connection = new Sequelize(database);
+	init() {
+		this.connection = new Sequelize(database);
 
-        models
-            .map((models) => models.init(this.connection))
-            .map((models) => models.associate?.(this.connection.models));
-    }
+		models
+			.map((models) => models.init(this.connection))
+			.map((models) => models.associate?.(this.connection.models));
+	}
 }
 
 export default new Database();
