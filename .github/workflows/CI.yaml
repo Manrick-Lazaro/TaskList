@@ -27,5 +27,8 @@ jobs:
             - name: Prettier check
               run: npx prettier . --check
 
+            - name: CPD Check
+              run: yarn run jscpd ./src
+
             - name: Run Tests
               run: yarn run test
