@@ -13,4 +13,3 @@ module.exports = {
 		underscoredAll: true, // nome relacionamento
 	},
 };
-
