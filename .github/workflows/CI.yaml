@@ -33,6 +33,7 @@ jobs:
                   if [[ $output == *"Found "* ]]; then
                   echo "Código duplicado encontrado"
                   exit 1
+                  fi
 
             - name: Run Tests
               run: yarn run test
