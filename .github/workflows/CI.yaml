@@ -28,12 +28,7 @@ jobs:
               run: npx prettier . --check
 
             - name: CPD Check
-              run: output=$(yarn run jscpd ./src)
-                  echo "$output"
-                  if [[ $output == *"Found "* ]]; then
-                    echo "Código duplicado encontrado"
-                    exit 1
-                  fi
+              run: yarn run jscpd ./src --exitCode 1
 
             - name: Run Tests
               run: yarn run test
